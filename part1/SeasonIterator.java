@@ -1,12 +1,13 @@
 package part1;
 import java.util.Iterator;
-public class SeasonIterator implements Iterator<Episode> {
+public class SeasonIterator implements Iterator<Episode> {  // Реализуем Iterator<Episode>
     private Season season;
     private int currentIndex = 0;
 
     public SeasonIterator(Season season) {
         this.season = season;
     }
+
 
     @Override
     public boolean hasNext() {

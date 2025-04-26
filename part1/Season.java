@@ -1,10 +1,11 @@
 package part1;
+
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Season implements Iterable<Episode> {
-    List<Episode> episodes;
+    private List<Episode> episodes;
 
     public Season() {
         episodes = new ArrayList<Episode>();
@@ -20,6 +21,6 @@ public class Season implements Iterable<Episode> {
 
     @Override
     public Iterator<Episode> iterator() {
-        return new SeasonIterator(this);
+        return new SeasonIterator(this); // Возвращаем итератор для сезона
     }
 }

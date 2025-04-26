@@ -1,16 +1,18 @@
 package part1;
+import java.util.Iterator;
+
 
 import java.util.List;
 
-public class BingeIterator implements EpisodeIterator {
+public class BingeIterator implements Iterator<Episode> {  // Убедитесь, что BingeIterator реализует Iterator<Episode>
     private List<Season> seasons;
     private int seasonIndex = 0;
-    private EpisodeIterator currentIterator;
+    private Iterator<Episode> currentIterator;  // Используем Iterator<Episode>, а не EpisodeIterator
 
     public BingeIterator(List<Season> seasons) {
         this.seasons = seasons;
         if (seasons.size() > 0) {
-            this.currentIterator = new SeasonIterator(seasons.get(0)); // Убедитесь, что SeasonIterator реализует EpisodeIterator
+            this.currentIterator = new SeasonIterator(seasons.get(0));  // Инициализация итератора для первого сезона
         }
     }
 
