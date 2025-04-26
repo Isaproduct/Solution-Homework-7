@@ -14,13 +14,12 @@ public class AirportSimulation {
                 ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
                 executorService.scheduleAtFixedRate(() -> {
                         for (Aircraft aircraft : aircraftList) {
-                                if (Math.random() > 0.5) {  // Ошибка: самолеты слишком часто отправляют запросы на полосу
+                                if (Math.random() > 0.5) {
                                         aircraft.send("Request Runway", tower);
                                 }
                         }
                         tower.manageRunway();
                 }, 0, 1, TimeUnit.SECONDS);
-
 
                 executorService.schedule(() -> {
                         System.out.println("Emergency situation - MAYDAY!");
