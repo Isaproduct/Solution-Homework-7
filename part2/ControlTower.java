@@ -32,14 +32,13 @@ class ControlTower implements TowerMediator {
 
     public void manageRunway() {
         while (!landingQueue.isEmpty() || !takeoffQueue.isEmpty()) {
-            if (!takeoffQueue.isEmpty()) {
-                Aircraft aircraft = takeoffQueue.poll();
-                System.out.println("Takeoff " + aircraft.id);
-            } else if (!landingQueue.isEmpty()) {
+            if (!landingQueue.isEmpty()) {
                 Aircraft aircraft = landingQueue.poll();
                 System.out.println("Landing " + aircraft.id);
+            } else if (!takeoffQueue.isEmpty()) {
+                Aircraft aircraft = takeoffQueue.poll();
+                System.out.println("Takeoff " + aircraft.id);
             }
         }
     }
-
 }
