@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
+import java.util.NoSuchElementException;
 
 public class ShuffleSeasonIterator implements EpisodeIterator {
     private Season season;
