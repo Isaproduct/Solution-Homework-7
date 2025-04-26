@@ -1,6 +1,5 @@
 package part1;
 import java.util.Iterator;
-
 public class SeasonIterator implements Iterator<Episode> {
     private Season season;
     private int currentIndex = 0;
@@ -17,5 +16,7 @@ public class SeasonIterator implements Iterator<Episode> {
     @Override
     public Episode next() {
         return season.getEpisodes().get(currentIndex++);
+
     }
+
 }

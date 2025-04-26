@@ -1,6 +1,4 @@
 package part1;
-import java.util.Iterator;
-
 
 import java.util.List;
 
@@ -12,7 +10,7 @@ public class BingeIterator implements EpisodeIterator {
     public BingeIterator(List<Season> seasons) {
         this.seasons = seasons;
         if (seasons.size() > 0) {
-            this.currentIterator = new SeasonIterator(seasons.get(0));
+            this.currentIterator = new SeasonIterator(seasons.get(0)); // Убедитесь, что SeasonIterator реализует EpisodeIterator
         }
     }
 
@@ -22,7 +20,7 @@ public class BingeIterator implements EpisodeIterator {
             return true;
         } else if (seasonIndex < seasons.size() - 1) {
             seasonIndex++;
-            currentIterator = new SeasonIterator(seasons.get(seasonIndex));
+            currentIterator = new SeasonIterator(seasons.get(seasonIndex)); // Убедитесь, что SeasonIterator реализует EpisodeIterator
             return currentIterator.hasNext();
         }
         return false;
