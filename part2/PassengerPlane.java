@@ -1,7 +1,8 @@
 package part2;
+
 class PassengerPlane extends Aircraft {
-    public void fuelCheck() {
-        System.out.println("Checking fuel level...");
+    public PassengerPlane(String id, int fuelLevel) {
+        super(id, fuelLevel);
     }
 
     @Override
@@ -9,4 +10,3 @@ class PassengerPlane extends Aircraft {
         System.out.println("PassengerPlane " + id + " received: " + msg);
     }
 }
-
