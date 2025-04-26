@@ -9,5 +9,3 @@ class FuelPriorityScheduler implements RunwayScheduler {
         return Integer.compare(a.getFuelLevel(), b.getFuelLevel());
     }
 }
-
-
