@@ -20,10 +20,8 @@ public class StreamingServiceBingeMode {
         series.add(season1);
         series.add(season2);
 
-        // Здесь должна быть ошибка: перемешивание может не работать корректно
         BingeIterator bingeIterator = new BingeIterator(series);
 
-        // В коде пропущены некоторые проверки и логику можно улучшить
         while (bingeIterator.hasNext()) {
             System.out.println(bingeIterator.next().getTitle());
         }

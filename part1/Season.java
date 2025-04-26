@@ -7,7 +7,7 @@ public class Season implements Iterable<Episode> {
     List<Episode> episodes;
 
     public Season() {
-        episodes = new ArrayList<Episode>(); // Указание типа
+        episodes = new ArrayList<Episode>();
     }
 
     void addEpisode(Episode e) {
@@ -20,6 +20,6 @@ public class Season implements Iterable<Episode> {
 
     @Override
     public Iterator<Episode> iterator() {
-        return new SeasonIterator(this); // Возвращаем правильный итератор
+        return new SeasonIterator(this);
     }
 }

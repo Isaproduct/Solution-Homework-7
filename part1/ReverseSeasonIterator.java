@@ -11,7 +11,7 @@ public class ReverseSeasonIterator implements EpisodeIterator {
 
     @Override
     public boolean hasNext() {
-        return currentIndex >= 0; // Ошибка: эта проверка не оптимизирована для всех случаев
+        return currentIndex >= 0;
     }
 
     @Override
